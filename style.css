@@ -8,11 +8,11 @@ color:white;
 header{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 40px;
 position:sticky;
 top:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.7);
 }
 
 .logo{
@@ -27,11 +27,11 @@ text-decoration:none;
 
 .hero{
 text-align:center;
-padding:130px 20px;
+padding:120px 20px;
 }
 
 .hero-sub{
-font-size:22px;
+font-size:20px;
 color:#aaa;
 }
 
@@ -45,8 +45,8 @@ margin-top:20px;
 padding:12px 25px;
 background:linear-gradient(45deg,#6ef7ff,#7a5cff);
 border-radius:6px;
-color:white;
 text-decoration:none;
+color:white;
 }
 
 section{
@@ -100,4 +100,41 @@ position:fixed;
 top:0;
 left:0;
 z-index:-1;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+nav{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:20px;
+background:#000;
+padding:20px;
+border:1px solid #6ef7ff;
+}
+
+nav a{
+margin:10px 0;
+}
+
+nav.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
 }
